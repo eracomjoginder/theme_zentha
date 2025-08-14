@@ -33,7 +33,7 @@ export default function Navigation({ currentSection, totalSections, onSectionCha
   }
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
+    <nav className={`backdrop-blur-sm fixed top-0 left-0 right-0 z-50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -65,7 +65,7 @@ export default function Navigation({ currentSection, totalSections, onSectionCha
                 Connect Wallet
               </button>
               <button className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-medium rounded-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/50">
-                Join Pre-ICO
+                Join Us
               </button>
             </div>
 

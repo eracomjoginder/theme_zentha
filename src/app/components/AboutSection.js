@@ -32,6 +32,12 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
+          <div className={`relative transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
+          }`}>
+            <img src="./images/character3.png" alt="Zentha" className="w-full h-full object-contain" />
+          </div>
+          {/* right Content */}
           <div className={`space-y-8 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'
           }`}>
@@ -73,11 +79,7 @@ export default function AboutSection() {
           </div>
 
           {/* Right Content - Gaming Character */}
-          <div className={`relative transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
-          }`}>
-            <img src="./images/character3.png" alt="Zentha" className="w-full h-full object-contain" />
-          </div>
+          
         </div>
 
         {/* Bottom Features */}
