@@ -91,15 +91,15 @@ export default function ContactPage() {
           </div>
 
           {/* Map and Info Grid */}
-          <div className="grid lg:grid-cols-2 gap-16 mb-20">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 mb-20">
             {/* Map */}
-            <div className={`transition-all duration-1000 ${
+            <div className={`flex-1 transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'
             }`}>
-              <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/10">
                 <h3 className="text-3xl font-bold text-white mb-8">Find Us</h3>
                 
-                <div className="relative w-full h-96 rounded-xl overflow-hidden">
+                <div className="relative w-full h-64 sm:h-80 lg:h-96 rounded-xl overflow-hidden">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.4194154846814!3d37.774929279759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c36c1c3d9%3A0x3b4736b6a6c1a3a3!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1635000000000!5m2!1sen!2sus"
                     width="100%"
@@ -124,7 +124,7 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Information */}
-            <div className={`space-y-8 transition-all duration-1000 ${
+            <div className={`flex-1 space-y-8 transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
             }`}>
               {/* Contact Info Cards */}
@@ -153,7 +153,7 @@ export default function ContactPage() {
               </div>
 
               {/* Social Links */}
-              <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/10">
                 <h4 className="text-2xl font-bold text-white mb-6">Follow Us</h4>
                 <div className="flex space-x-4">
                   <a href="#" className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white hover:scale-110 transition-transform duration-300">
