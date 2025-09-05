@@ -34,7 +34,7 @@ export default function BackgroundEffects() {
   }, [])
 
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden">
+    <div className="fixed inset-0 pointer-events-none overflow-hidden non-interactive-overlay">
       {/* Space Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#1a1a2e] to-[#16213e]"></div>
 
@@ -60,8 +60,8 @@ export default function BackgroundEffects() {
 
       {/* Nebulae/Gas Clouds */}
       <div className="absolute top-1/4 left-1/4 w-[800px] h-[600px] bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[500px] bg-purple-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute top-1/2 left-1/2 w-[700px] h-[400px] bg-pink-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+      <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[500px] bg-blue-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-1/2 left-1/2 w-[700px] h-[400px] bg-blue-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
 
       {/* Shooting Stars */}
       {Array.from({ length: 8 }, (_, i) => (
@@ -112,8 +112,8 @@ export default function BackgroundEffects() {
 
       {/* Floating Cosmic Elements */}
       <div className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-500/20 rounded-full animate-spin" style={{ animationDuration: '30s' }}></div>
-      <div className="absolute bottom-1/3 left-1/4 w-12 h-12 border border-purple-500/20 rounded-full animate-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }}></div>
-      <div className="absolute top-2/3 left-2/3 w-20 h-20 border border-pink-500/20 rounded-full animate-spin" style={{ animationDuration: '35s' }}></div>
+      <div className="absolute bottom-1/3 left-1/4 w-12 h-12 border border-blue-500/20 rounded-full animate-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }}></div>
+      <div className="absolute top-2/3 left-2/3 w-20 h-20 border border-blue-500/20 rounded-full animate-spin" style={{ animationDuration: '35s' }}></div>
 
       {/* Energy Field Lines */}
       <div className="absolute inset-0">

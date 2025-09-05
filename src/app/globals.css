@@ -1,13 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'Parkins Sans';
+  src: url('/fonts/ParkinsSans-Regular.woff2') format('woff2'),
+       url('/fonts/ParkinsSans-Regular.woff') format('woff'),
+       url('/fonts/ParkinsSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Parkins Sans';
+  src: url('/fonts/ParkinsSans-Medium.woff2') format('woff2'),
+       url('/fonts/ParkinsSans-Medium.woff') format('woff'),
+       url('/fonts/ParkinsSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Parkins Sans';
+  src: url('/fonts/ParkinsSans-SemiBold.woff2') format('woff2'),
+       url('/fonts/ParkinsSans-SemiBold.woff') format('woff'),
+       url('/fonts/ParkinsSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Parkins Sans';
+  src: url('/fonts/ParkinsSans-Bold.woff2') format('woff2'),
+       url('/fonts/ParkinsSans-Bold.woff') format('woff'),
+       url('/fonts/ParkinsSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Parkins Sans';
+  src: url('/fonts/ParkinsSans-ExtraBold.woff2') format('woff2'),
+       url('/fonts/ParkinsSans-ExtraBold.woff') format('woff'),
+       url('/fonts/ParkinsSans-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --primary-blue: #00d4ff;
-  --primary-purple: #8b5cf6;
+  --primary-blue: #3262ff;
+  --primary-purple: #5cacf6;
   --primary-pink: #ec4899;
   --dark-bg: #0a0a0a;
   --darker-bg: #050505;
+  --font-primary: "Parkinsans", sans-serif;
 }
 
 * {
@@ -22,12 +76,18 @@ body {
   overflow-x: hidden;
   background: var(--dark-bg);
   color: #ffffff;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-primary);
 }
 
 body {
   background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
   min-height: 100vh;
+}
+
+/* Ensure overlays never intercept clicks */
+.non-interactive-overlay,
+.non-interactive-overlay * {
+  pointer-events: none !important;
 }
 
 /* Custom scrollbar */
@@ -172,6 +232,7 @@ body {
 .z-50 {
   z-index: 50;
 }
+
 
 /* Custom background gradients */
 .bg-gradient-to-br {

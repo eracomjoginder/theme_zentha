@@ -4,12 +4,14 @@ import { useState, useEffect } from 'react'
 import Navigation from './components/Navigation'
 import HeroSection from './components/HeroSection'
 import AboutSection from './components/AboutSection'
-import FeaturesSection from './components/FeaturesSection'
-import RoadmapSection from './components/RoadmapSection'
-import TeamSection from './components/TeamSection'
+import NFTSection from './components/NFTSection'
+import PlayToOwnSection from './components/PlayToOwnSection'
+import WhyZenthaSection from './components/WhyZenthaSection'
 import ContactSection from './components/ContactSection'
 import BackgroundEffects from './components/BackgroundEffects'
 import SharedFooter from './components/SharedFooter'
+import "@fontsource/parkinsans";          // Defaults to weight 400
+import "@fontsource/parkinsans/500.css";
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState(0)
@@ -18,9 +20,9 @@ export default function Home() {
   const sections = [
     { id: 'hero', component: HeroSection },
     { id: 'about', component: AboutSection },
-    { id: 'features', component: FeaturesSection },
-    { id: 'roadmap', component: RoadmapSection },
-    { id: 'team', component: TeamSection },
+    { id: 'why-zentha', component: WhyZenthaSection },
+    { id: 'nft-section', component: NFTSection },
+    { id: 'play-to-own', component: PlayToOwnSection },
     { id: 'contact', component: ContactSection }
   ]
 

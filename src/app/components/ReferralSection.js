@@ -92,9 +92,9 @@ export default function ReferralSection() {
           {/* Enhanced Main Title */}
           <div className="text-center lg:text-left">
             <h2 className="text-5xl lg:text-6xl font-bold leading-tight mb-6 relative">
-              <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse-glow relative">
+              <span className="bg-gradient-to-r from-blue-500 via-blue-500 to-blue-500 bg-clip-text text-transparent animate-pulse-glow relative">
                 Referral Reward
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent opacity-20 blur-sm transform translate-y-1">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-500 to-blue-500 bg-clip-text text-transparent opacity-20 blur-sm transform translate-y-1">
                   Referral Reward
                 </div>
               </span>
@@ -159,29 +159,29 @@ export default function ReferralSection() {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
         }`}>
           <div 
-            className="relative p-8 bg-gradient-to-br from-purple-900/60 to-purple-800/40 backdrop-blur-md border border-purple-500/60 rounded-2xl shadow-2xl hover:scale-110 transition-all duration-500 group cursor-pointer overflow-hidden"
+            className="relative p-8 bg-gradient-to-br from-blue-900/60 to-blue-800/40 backdrop-blur-md border border-blue-500/60 rounded-2xl shadow-2xl hover:scale-110 transition-all duration-500 group cursor-pointer overflow-hidden"
             onMouseEnter={() => setHoveredCard('first')}
             onMouseLeave={() => setHoveredCard(null)}
           >
             {/* Enhanced Border Glow */}
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-blue-500/30 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
             
             {/* Content */}
             <div className="relative z-10 text-center space-y-4">
-              <div className="text-6xl font-bold text-white mb-2 group-hover:text-purple-200 transition-colors duration-500">$10</div>
-              <div className="text-lg font-semibold text-white/90 uppercase tracking-wider group-hover:text-purple-200 transition-colors duration-500">Reward</div>
+              <div className="text-6xl font-bold text-white mb-2 group-hover:text-blue-200 transition-colors duration-500">$10</div>
+              <div className="text-lg font-semibold text-white/90 uppercase tracking-wider group-hover:text-blue-200 transition-colors duration-500">Reward</div>
               <div className="text-white/80 group-hover:text-white/90 transition-colors duration-300">for achieving</div>
-              <div className="text-3xl font-bold text-white uppercase tracking-wider group-hover:text-purple-200 transition-colors duration-500">7 Direct</div>
-              <div className="text-3xl font-bold text-white uppercase tracking-wider group-hover:text-purple-200 transition-colors duration-500">Referrals</div>
+              <div className="text-3xl font-bold text-white uppercase tracking-wider group-hover:text-blue-200 transition-colors duration-500">7 Direct</div>
+              <div className="text-3xl font-bold text-white uppercase tracking-wider group-hover:text-blue-200 transition-colors duration-500">Referrals</div>
               <div className="text-white/80 group-hover:text-white/90 transition-colors duration-300">within 7 days.</div>
             </div>
 
             {/* Enhanced Floating Elements */}
-            <div className="absolute top-4 right-4 w-3 h-3 bg-purple-400 rounded-full animate-ping group-hover:scale-150 transition-transform duration-300">
-              <div className="absolute inset-0 bg-purple-300 rounded-full animate-ping" style={{ animationDelay: '0.2s' }}></div>
+            <div className="absolute top-4 right-4 w-3 h-3 bg-blue-400 rounded-full animate-ping group-hover:scale-150 transition-transform duration-300">
+              <div className="absolute inset-0 bg-blue-300 rounded-full animate-ping" style={{ animationDelay: '0.2s' }}></div>
             </div>
-            <div className="absolute bottom-4 left-4 w-2 h-2 bg-pink-400 rounded-full animate-ping group-hover:scale-150 transition-transform duration-300" style={{ animationDelay: '0.5s' }}>
-              <div className="absolute inset-0 bg-pink-300 rounded-full animate-ping" style={{ animationDelay: '0.7s' }}></div>
+            <div className="absolute bottom-4 left-4 w-2 h-2 bg-blue-400 rounded-full animate-ping group-hover:scale-150 transition-transform duration-300" style={{ animationDelay: '0.5s' }}>
+              <div className="absolute inset-0 bg-blue-300 rounded-full animate-ping" style={{ animationDelay: '0.7s' }}></div>
             </div>
           </div>
         </div>
@@ -234,7 +234,7 @@ export default function ReferralSection() {
           {/* Enhanced Character */}
           <div className="relative z-10">
             {/* Enhanced Character Head */}
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 h-24 bg-gradient-to-b from-purple-700 to-blue-800 rounded-t-full">
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 h-24 bg-gradient-to-b from-blue-700 to-blue-800 rounded-t-full">
               {/* Enhanced Glowing Visor */}
               <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-16 h-8 bg-gradient-to-r from-orange-500 to-orange-400 rounded-full animate-pulse shadow-lg shadow-orange-500/50 group-hover:shadow-orange-400/70 transition-all duration-500">
                 <div className="absolute inset-1 bg-gradient-to-r from-orange-400 to-orange-300 rounded-full animate-ping"></div>
@@ -243,16 +243,16 @@ export default function ReferralSection() {
             </div>
 
             {/* Enhanced Character Body */}
-            <div className="absolute top-24 left-1/2 transform -translate-x-1/2 w-24 h-32 bg-gradient-to-b from-blue-800 to-purple-900 rounded-t-full">
+            <div className="absolute top-24 left-1/2 transform -translate-x-1/2 w-24 h-32 bg-gradient-to-b from-blue-800 to-blue-900 rounded-t-full">
               {/* Enhanced Circuit Lines */}
               <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-blue-400 to-blue-300 rounded-full animate-pulse"></div>
-              <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-purple-400 to-purple-300 rounded-full animate-pulse" style={{ animationDelay: '0.3s' }}></div>
-              <div className="absolute top-12 left-1/2 transform -translate-x-1/2 w-14 h-1 bg-gradient-to-r from-pink-400 to-pink-300 rounded-full animate-pulse" style={{ animationDelay: '0.6s' }}></div>
+              <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-blue-400 to-blue-300 rounded-full animate-pulse" style={{ animationDelay: '0.3s' }}></div>
+              <div className="absolute top-12 left-1/2 transform -translate-x-1/2 w-14 h-1 bg-gradient-to-r from-blue-400 to-blue-300 rounded-full animate-pulse" style={{ animationDelay: '0.6s' }}></div>
             </div>
 
             {/* Enhanced Wires/Tubes */}
             <div className="absolute top-16 -left-2 w-1 h-8 bg-gradient-to-b from-blue-400 to-blue-300 rounded-full animate-pulse group-hover:scale-150 transition-transform duration-300"></div>
-            <div className="absolute top-20 -right-2 w-1 h-6 bg-gradient-to-b from-purple-400 to-purple-300 rounded-full animate-pulse group-hover:scale-150 transition-transform duration-300" style={{ animationDelay: '0.4s' }}></div>
+            <div className="absolute top-20 -right-2 w-1 h-6 bg-gradient-to-b from-blue-400 to-blue-300 rounded-full animate-pulse group-hover:scale-150 transition-transform duration-300" style={{ animationDelay: '0.4s' }}></div>
           </div>
 
           {/* Enhanced Glow Effect */}
@@ -266,12 +266,12 @@ export default function ReferralSection() {
         <div className="absolute inset-8 border border-blue-300/20 rounded-full animate-spin" style={{ animationDuration: '10s' }}></div>
       </div>
       
-      <div className="absolute top-40 right-40 w-16 h-16 border border-purple-500/40 rounded-full animate-spin hover:scale-150 transition-all duration-500" style={{ animationDuration: '15s', animationDirection: 'reverse' }}>
-        <div className="absolute inset-3 border border-purple-400/30 rounded-full animate-spin" style={{ animationDuration: '12s' }}></div>
+      <div className="absolute top-40 right-40 w-16 h-16 border border-blue-500/40 rounded-full animate-spin hover:scale-150 transition-all duration-500" style={{ animationDuration: '15s', animationDirection: 'reverse' }}>
+        <div className="absolute inset-3 border border-blue-400/30 rounded-full animate-spin" style={{ animationDuration: '12s' }}></div>
       </div>
       
-      <div className="absolute bottom-40 left-40 w-24 h-24 border border-pink-500/40 rounded-full animate-spin hover:scale-150 transition-all duration-500" style={{ animationDuration: '25s' }}>
-        <div className="absolute inset-4 border border-pink-400/30 rounded-full animate-spin" style={{ animationDuration: '18s', animationDirection: 'reverse' }}></div>
+      <div className="absolute bottom-40 left-40 w-24 h-24 border border-blue-500/40 rounded-full animate-spin hover:scale-150 transition-all duration-500" style={{ animationDuration: '25s' }}>
+        <div className="absolute inset-4 border border-blue-400/30 rounded-full animate-spin" style={{ animationDuration: '18s', animationDirection: 'reverse' }}></div>
       </div>
 
       {/* Enhanced Energy Field Lines */}
