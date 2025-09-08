@@ -251,6 +251,7 @@ export default function AboutPage() {
                       className="w-full h-full object-contain"
                       width={500}
                       height={500}
+                      
                     />
                   </div>
 
