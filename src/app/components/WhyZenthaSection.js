@@ -1,47 +1,18 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from "next/image";
 
 export default function WhyZenthaSection() {
   const [isVisible, setIsVisible] = useState(false)
   const [activeFeature, setActiveFeature] = useState(0)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    const element = document.getElementById('why-zentha')
-    if (element) {
-      observer.observe(element)
-    }
-
-    return () => {
-      if (element) {
-        observer.unobserve(element)
-      }
-    }
-  }, [])
-
-  // Auto-rotate active feature every 5 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveFeature(prev => (prev + 1) % keyFeatures.length)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [])
 
   const keyFeatures = [
     {
       id: 1,
       title: "Gameplay Comes First",
       description: "AAA-quality graphics and immersive gameplay",
-      image: "./images/character1.png",
+      image: "/images/character1.png",
       color: "from-blue-500 to-cyan-500",
       bgGradient: "from-blue-500/20 to-cyan-500/20"
     },
@@ -49,7 +20,7 @@ export default function WhyZenthaSection() {
       id: 2,
       title: "True Ownership",
       description: "Trade, upgrade, or sell — without limits",
-      image: "./images/character2.png",
+      image: "/images/character2.png",
       color: "from-blue-500 to-blue-500",
       bgGradient: "from-blue-500/20 to-blue-500/20"
     },
@@ -57,7 +28,7 @@ export default function WhyZenthaSection() {
       id: 3,
       title: "One Universe, Many Games",
       description: "Multiple interconnected titles under one ecosystem",
-      image: "./images/character3.png",
+      image: "/images/character3.png",
       color: "from-green-500 to-emerald-500",
       bgGradient: "from-green-500/20 to-emerald-500/20"
     },
@@ -65,7 +36,7 @@ export default function WhyZenthaSection() {
       id: 4,
       title: "Fair, Transparent, and Player-Friendly",
       description: "Earn rewards by playing and contributing",
-      image: "./images/character4.png",
+      image: "/images/character4.png",
       color: "from-yellow-500 to-orange-500",
       bgGradient: "from-yellow-500/20 to-orange-500/20"
     }
@@ -101,6 +72,36 @@ export default function WhyZenthaSection() {
     "EARN FROM SKILL, EFFORT, AND RARITY",
     "BUILD A LEGACY INSIDE THE ZENTHA UNIVERSE"
   ]
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    const element = document.getElementById('why-zentha')
+    if (element) {
+      observer.observe(element)
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element)
+      }
+    }
+  }, [])
+
+  // Auto-rotate active feature every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveFeature(prev => (prev + 1) % keyFeatures.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [keyFeatures.length])
 
   return (
     <section id="why-zentha" className="min-h-screen relative overflow-hidden px-4 sm:px-6 lg:px-8 py-12 sm:py-12 lg:py-20">
@@ -147,9 +148,11 @@ export default function WhyZenthaSection() {
                 {/* Feature Image */}
                 <div className="relative mb-4 sm:mb-6">
                   <div className="w-full h-24 sm:h-32 lg:h-40 bg-gradient-to-br from-black/40 to-black/60 rounded-lg sm:rounded-xl overflow-hidden">
-                    <img
+                    <Image
                       src={feature.image}
                       alt={feature.title}
+                      width={500}
+                      height={500}
                       className="w-full h-full object-contain transform hover:scale-110 transition-transform duration-500"
                     />
                   </div>

@@ -86,7 +86,7 @@ export default function ContactPage() {
               </span>
             </h1>
             <p className="text-2xl lg:text-3xl text-white/90 font-medium max-w-3xl mx-auto">
-              Have questions? We'd love to hear from you. Find us on the map or reach out through our contact information.
+              Have questions? We&apos;d love to hear from you. Find us on the map or reach out through our contact information.
             </p>
           </div>
 
@@ -117,7 +117,7 @@ export default function ContactPage() {
                     Visit us at our San Francisco location
                   </p>
                   <p className="text-white/60 text-sm mt-2">
-                    We're located in the heart of the city
+                    We&apos;re located in the heart of the city
                   </p>
                 </div>
               </div>

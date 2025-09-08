@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import Image from "next/image";
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -25,16 +26,13 @@ export default function HeroSection() {
       setCurrentMetric(prev => (prev + 1) % 4)
     }, 3000)
     
-          // Removed particle system for cleaner background
-      window.addEventListener('mousemove', handleMouseMove)
-      
-      return () => {
-        window.removeEventListener('mousemove', handleMouseMove)
-      }
-
+    // Removed particle system for cleaner background
+    window.addEventListener('mousemove', handleMouseMove)
+    
     return () => {
       clearTimeout(timer)
       clearInterval(metricTimer)
+      window.removeEventListener('mousemove', handleMouseMove)
     }
   }, [])
 
@@ -49,8 +47,10 @@ export default function HeroSection() {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-6 lg:px-8 pt-20 pb-8">
       {/* Background GIF */}
       <div className="absolute inset-0 z-0">
-        <img 
+        <Image 
           src="/images/hero-bg.gif" 
+          width={500}
+          height={500}
           alt="Hero Background" 
           className="w-full h-full object-cover opacity-20"
         />
@@ -80,7 +80,7 @@ export default function HeroSection() {
               </span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 font-medium leading-relaxed max-w-2xl">
-              The world's first comprehensive blockchain gaming platform connecting 
+              The world&apos;s first comprehensive blockchain gaming platform connecting 
               <span className="text-blue-400 font-semibold"> 500,000+ gamers</span> with 
               <span className="text-blue-400 font-semibold"> next-generation experiences</span>
             </p>
@@ -120,7 +120,7 @@ export default function HeroSection() {
           
           {/* Responsive Analytics Dashboard */}
           <div className="flex justify-center">
-            <img src="./images/hero.png" alt="Zentha Platform" className="max-w-[310px] h-auto object-contain" />
+            <Image src="/images/hero.png" width={500} height={500} alt="Zentha Platform" className="max-w-[310px] h-auto object-contain" />
           </div>
         </div>
       </div>

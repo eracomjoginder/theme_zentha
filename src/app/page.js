@@ -10,8 +10,6 @@ import WhyZenthaSection from './components/WhyZenthaSection'
 import ContactSection from './components/ContactSection'
 import BackgroundEffects from './components/BackgroundEffects'
 import SharedFooter from './components/SharedFooter'
-import "@fontsource/parkinsans";          // Defaults to weight 400
-import "@fontsource/parkinsans/500.css";
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState(0)
@@ -64,7 +62,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#0a0a0a] via-[#1a1a2e] to-[#16213e] relative overflow-hidden">
+    <main className="min-h-screen bg-gradient-to-br from-[#0a0a0a] via-[#1a1a2e] to-[#16213e] relative overflow-hidden font-sans">
       <BackgroundEffects />
       <Navigation currentSection={currentSection} totalSections={sections.length} onSectionChange={goToSection} />
       <div className="relative z-10">

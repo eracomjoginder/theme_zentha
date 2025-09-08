@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from "next/image";
 import { useState, useEffect } from 'react'
 
 export default function SharedFooter() {
@@ -141,7 +142,7 @@ export default function SharedFooter() {
               </div>
 
               <div className="text-center lg:text-right space-y-2">
-                <img src="./images/logo/logo.png" alt="Zentha Logo" className="w-[150px]" />
+                <Image src="/images/logo/logo.png" alt="Zentha Logo" width={500} height={500} className="w-[150px]" />
               </div>
 
               {/* Contact Info */}

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react';
+import Image from "next/image";
 import heroIcon from '../../../public/images/icons/super-power.png';
 import controllerIcon2 from '../../../public/images/icons/controller.png';
 import weaponIcon from '../../../public/images/icons/cross-swords.png';
@@ -21,39 +22,9 @@ export default function NFTSection() {
     if (typeof icon === 'string') {
       return icon
     } else {
-      return <img src={icon.src} alt="NFT Icon" className={className} />
+      return <Image src={icon.src} alt="NFT Icon" className={className} width={500} height={500} />
     }
   }
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    const element = document.getElementById('nft-section')
-    if (element) {
-      observer.observe(element)
-    }
-
-    return () => {
-      if (element) {
-        observer.unobserve(element)
-      }
-    }
-  }, [])
-
-  // Auto-rotate active NFT every 5 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveNFT(prev => (prev + 1) % nftTypes.length)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [])
 
   const nftTypes = [
     {
@@ -67,7 +38,7 @@ export default function NFTSection() {
         "Use across multiple Zentha titles – RPG, PvP Arena, Open World, etc",
         "Trade or lend your character NFTs to other players"
       ],
-      image: "./images/character1.png",
+      image: "/images/character1.png",
       color: "from-blue-500 to-cyan-500",
       bgGradient: "from-blue-500/20 to-cyan-500/20",
       icon: heroIcon
@@ -83,7 +54,7 @@ export default function NFTSection() {
         "Legendary weapons become collectables with real-world value",
         "Some NFTs are only winnable through elite tournaments or quests"
       ],
-      image: "./images/character2.png",
+      image: "/images/character2.png",
       color: "from-blue-500 to-blue-500",
       bgGradient: "from-blue-500/20 to-blue-500/20",
       icon: weaponIcon
@@ -99,7 +70,7 @@ export default function NFTSection() {
         "Rent land to players or developers",
         "Land scarcity ensures long-term value in the game economy"
       ],
-      image: "./images/character3.png",
+      image: "/images/character3.png",
       color: "from-blue-500 to-emerald-500",
       bgGradient: "from-blue-500/20 to-emerald-500/20",
       icon: landIcon
@@ -114,7 +85,7 @@ export default function NFTSection() {
         "Mintable badges and clan emblems for guild-based identity",
         "Provides a permanent on-chain history of player milestones in Zentha"
       ],
-      image: "./images/character4.png",
+      image: "/images/character4.png",
       color: "from-yellow-500 to-orange-500",
       bgGradient: "from-yellow-500/20 to-orange-500/20",
       icon: trophyIcon
@@ -144,6 +115,36 @@ export default function NFTSection() {
     }
   ]
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    const element = document.getElementById('nft-section')
+    if (element) {
+      observer.observe(element)
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element)
+      }
+    }
+  }, [])
+
+  // Auto-rotate active NFT every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveNFT(prev => (prev + 1) % nftTypes.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [nftTypes.length])
+
   return (
     <section id="nft-section" className="min-h-screen relative overflow-hidden px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
       {/* Background Effects */}
@@ -169,7 +170,7 @@ export default function NFTSection() {
             <span className="text-white">Game Assets, Reimagined</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed px-4">
-            In Zentha, NFTs aren't hype — they're the foundation of your in-game identity, power, and legacy.
+            In Zentha, NFTs aren&apos;t hype — they&apos;re the foundation of your in-game identity, power, and legacy.
           </p>
         </div>
 
@@ -283,9 +284,11 @@ export default function NFTSection() {
                     <div className="w-full h-full bg-gradient-to-br from-black/40 to-black/60 rounded-lg sm:rounded-xl p-2 sm:p-4">
                       {/* Character Image */}
                       <div className="w-full h-3/4 mb-2 sm:mb-4">
-                        <img
+                        <Image
                           src={nftTypes[activeNFT].image}
                           alt={nftTypes[activeNFT].title}
+                          width={500}
+                          height={500}
                           className="w-full h-full object-contain transform hover:scale-110 transition-transform duration-500"
                         />
                       </div>

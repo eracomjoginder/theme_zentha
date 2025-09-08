@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from "next/image";
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 
@@ -50,7 +51,7 @@ export default function Navigation({ currentSection, totalSections, onSectionCha
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 sm:space-x-3 hover:opacity-80 transition-opacity duration-300">
-            <img src="./images/logo/logo.png" alt="Zentha" className="w-auto h-10 sm:w-22 sm:h-14" />
+            <Image src="/images/logo/logo.png" width={500} height={500} alt="Zentha" className="w-auto h-10 sm:w-22 sm:h-14" />
           </Link>
 
           {/* Desktop Navigation Links */}

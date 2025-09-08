@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-
+import Image from "next/image";
 export default function AboutSection() {
   const [isVisible, setIsVisible] = useState(false)
 
@@ -35,9 +35,11 @@ export default function AboutSection() {
           <div className={`lg:flex-1 relative transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
           }`}>
-            <img 
-              src="./images/character3.png" 
+            <Image 
+              src="/images/character3.png" 
               alt="Zentha" 
+              width={500}
+              height={500}
               className="w-full max-w-[400px] sm:max-w-[500px] lg:max-w-none h-auto object-contain mx-auto lg:mx-0" 
             />
           </div>

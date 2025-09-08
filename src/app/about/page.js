@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from "next/image";
 import Link from 'next/link'
 import Navigation from '../components/Navigation'
 import SharedFooter from '../components/SharedFooter'
@@ -19,7 +20,7 @@ export default function AboutPage() {
     if (typeof icon === 'string') {
       return icon
     } else {
-      return <img src={icon.src} alt="Icon" className={className} />
+      return <Image src={icon.src} alt="Icon" className={className} width={500} height={500}/>
     }
   }
 
@@ -244,10 +245,12 @@ export default function AboutPage() {
                 <div className="relative w-full aspect-[3/4]">
                   {/* Main Character Image */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <img 
-                      src="./images/character1.png" 
+                    <Image 
+                      src="/images/character1.png" 
                       alt="Zentha Gaming Character" 
                       className="w-full h-full object-contain"
+                      width={500}
+                      height={500}
                     />
                   </div>
 

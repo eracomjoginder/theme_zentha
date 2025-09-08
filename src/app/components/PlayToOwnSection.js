@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from "next/image";
+import Link from 'next/link'
 import controllerIcon from '../../../public/images/icons/controller.png'
 import trophyIcon from '../../../public/images/icons/trophy.png'
 import diamondIcon from '../../../public/images/icons/diamond.png'
@@ -18,39 +20,9 @@ export default function PlayToOwnSection() {
     if (typeof icon === 'string') {
       return icon
     } else {
-      return <img src={icon.src} alt="Icon" className={className} />
+      return <Image src={icon.src} alt="Icon" className={className} width={500} height={500} />
     }
   }
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    const element = document.getElementById('play-to-own')
-    if (element) {
-      observer.observe(element)
-    }
-
-    return () => {
-      if (element) {
-        observer.unobserve(element)
-      }
-    }
-  }, [])
-
-  // Auto-rotate active step every 4 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveStep(prev => (prev + 1) % playSteps.length)
-    }, 4000)
-    return () => clearInterval(timer)
-  }, [])
 
   const playSteps = [
     {
@@ -133,6 +105,36 @@ export default function PlayToOwnSection() {
       icon: diamondIcon
     }
   ]
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    const element = document.getElementById('play-to-own')
+    if (element) {
+      observer.observe(element)
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element)
+      }
+    }
+  }, [])
+
+  // Auto-rotate active step every 4 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveStep(prev => (prev + 1) % playSteps.length)
+    }, 4000)
+    return () => clearInterval(timer)
+  }, [playSteps.length])
 
   return (
     <section id="play-to-own" className="min-h-screen relative overflow-hidden px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
@@ -395,12 +397,17 @@ export default function PlayToOwnSection() {
               No money needed, no crypto knowledge required. Just pure gaming skill and dedication.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white font-bold rounded-xl transform hover:scale-105 transition-all duration-300 shadow-2xl shadow-blue-500/25 text-lg">
-                Start Playing Free
-              </button>
-              <button className="px-8 py-4 border-2 border-white/30 hover:border-white/50 text-white font-bold rounded-xl transition-all duration-300 backdrop-blur-sm hover:bg-white/10 text-lg">
-                Learn More
-              </button>
+            <Link href="/" className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-500 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 text-sm sm:text-base">
+                    <span className="flex items-center justify-center space-x-2">
+                      <span>Start playing free</span>
+                      <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </span>
+                  </Link>
+                  <Link href="/about" className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-slate-600 hover:border-slate-500 text-slate-300 hover:text-white font-bold rounded-xl transition-all duration-300 backdrop-blur-sm hover:bg-white/5 text-sm sm:text-base">
+                    Learn More
+                  </Link>
             </div>
           </div>
         </div>
