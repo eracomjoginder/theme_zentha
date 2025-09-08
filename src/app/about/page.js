@@ -250,7 +250,7 @@ export default function AboutPage() {
                       alt="Zentha Gaming Character" 
                       className="w-full h-full object-contain"
                       width={500}
-                      height={500}
+                      height={500}  
                     />
                   </div>
 
