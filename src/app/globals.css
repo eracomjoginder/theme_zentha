@@ -1,59 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import '@fontsource/parkinsans/400.css';
+@import '@fontsource/parkinsans/500.css';
+@import '@fontsource/parkinsans/600.css';
+@import '@fontsource/parkinsans/700.css';
+@import '@fontsource/parkinsans/800.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-@font-face {
-  font-family: 'Parkins Sans';
-  src: url('/fonts/ParkinsSans-Regular.woff2') format('woff2'),
-       url('/fonts/ParkinsSans-Regular.woff') format('woff'),
-       url('/fonts/ParkinsSans-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Parkins Sans';
-  src: url('/fonts/ParkinsSans-Medium.woff2') format('woff2'),
-       url('/fonts/ParkinsSans-Medium.woff') format('woff'),
-       url('/fonts/ParkinsSans-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Parkins Sans';
-  src: url('/fonts/ParkinsSans-SemiBold.woff2') format('woff2'),
-       url('/fonts/ParkinsSans-SemiBold.woff') format('woff'),
-       url('/fonts/ParkinsSans-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Parkins Sans';
-  src: url('/fonts/ParkinsSans-Bold.woff2') format('woff2'),
-       url('/fonts/ParkinsSans-Bold.woff') format('woff'),
-       url('/fonts/ParkinsSans-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Parkins Sans';
-  src: url('/fonts/ParkinsSans-ExtraBold.woff2') format('woff2'),
-       url('/fonts/ParkinsSans-ExtraBold.woff') format('woff'),
-       url('/fonts/ParkinsSans-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
 
 :root {
   --primary-blue: #3262ff;
@@ -61,7 +14,7 @@
   --primary-pink: #ec4899;
   --dark-bg: #0a0a0a;
   --darker-bg: #050505;
-  --font-primary: "Parkins Sans", sans-serif;
+  --font-primary: "Parkinsans", sans-serif;
 }
 
 * {
